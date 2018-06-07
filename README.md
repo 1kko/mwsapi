@@ -71,7 +71,7 @@ print mws.file.mwsinfo("4020ce0de0cc206f9bc241e5634a02da")
   mws.file.behaviorinfo("4020ce0de0cc206f9bc241e5634a02da")
   ```
 
-  ### file.staticinfo(`hash`)
+  ### file.staticinfo(*hash*)
   Reports static analysis of given hash.
   Supports md5, sha1, sha256.
   ```

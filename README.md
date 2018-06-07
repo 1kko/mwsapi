@@ -117,6 +117,6 @@ print mws.file.mwsinfo("4020ce0de0cc206f9bc241e5634a02da")
 
 
 ## TODO (not yet implemented)
-[ ] Return Code parsing
-[ ] Full English documentation for methods
-[ ] bulk API support (maybe)
+- [ ] Return Code parsing
+- [ ] Full English documentation for methods
+- [ ] bulk API support (maybe)

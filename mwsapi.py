@@ -4,7 +4,8 @@
 
 
 """Malwares.com API
-Python wrapper for Malwares.com API - by me@1kko.com
+Python wrapper for Malwares.com API - by ikko
+Github Repository: https://github.com/1kko/mwsapi
 complete api documentation: https://www.malwares.com/about/api
 
 Usage: 

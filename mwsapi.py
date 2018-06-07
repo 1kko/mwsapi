@@ -334,7 +334,7 @@ class v3():
 				sha2hash=hashValue
 			else:
 				# try get sha256 value from hash
-				sha2hash=self.mwsInfo(hashValue)['sha256']
+				sha2hash=self.mwsinfo(hashValue)['sha256']
 
 			param={'api_key':self.api_key, 'hash':sha2hash}
 			

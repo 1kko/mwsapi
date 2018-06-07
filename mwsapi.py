@@ -319,11 +319,11 @@ class v3():
 				fileName (str) : file name for saved
 
 			Returns:
-				file content.
+				Response object
 
 			Example:
 				with open("4020ce0de0cc206f9bc241e5634a02da", "wb") as fd:
-					fd.write(mws.file.download("4020ce0de0cc206f9bc241e5634a02da"))
+					fd.write(mws.file.download("4020ce0de0cc206f9bc241e5634a02da").content)
 
 			"""
 

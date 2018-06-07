@@ -15,16 +15,28 @@ Complete API documentation: https://www.malwares.com/about/api
 
 ## Quick Start
 
-```
-from mwsapi import v3
+  1. Download mwsapi.py
+  ```
+  $ wget https://raw.githubusercontent.com/1kko/mwsapi/master/mwsapi.py
+  ```
 
-# Initialize class, enter API Key and API Type
-mws=v3(api_key="YOUR API KEY", api_type="public")
+  2. Create test.py with following content then execute.
+  ```
+  from mwsapi import v3
 
-# Get File Analysis Report
-print mws.file.mwsinfo("4020ce0de0cc206f9bc241e5634a02da")
-```
+  # Initialize class, enter API Key and API Type
+  mws=v3(api_key="YOUR API KEY", api_type="public")
 
+  # Get File Analysis Report
+  print mws.file.mwsinfo("4020ce0de0cc206f9bc241e5634a02da")
+  ```
+  
+  3. Execute the `test.py`
+  ```
+  $ python test.py
+  ```
+  
+  _* For more usage, refer to https://github.com/1kko/mwsapi/blob/master/testApi.py_
 
 ## Installation
 

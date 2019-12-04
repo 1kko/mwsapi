@@ -84,13 +84,13 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "md5": "파일의 MD5 해시 값 (String)",
-				  "sha1": "파일의 SHA1 해시 값 (String)",
-				  "sha256": "파일의 SHA256 해시 값 (String)"
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API Page Version (String)",
+				  "date": "requested date time of API (String)",
+				  "md5": "MD5 Hash value of the object (String)",
+				  "sha1": "SHA1 hash value of the object (String)",
+				  "sha256": "SHA256 Hash value of the Object (String)"
 				}
 
 			"""
@@ -120,9 +120,9 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "API Request Time (String)",
-				  "md5": "MD5 Hash value of the file (String)",
-				  "sha1": "SHA1 Hash value of the file (String)",
+				  "date": "requested date time of API (String)",
+				  "md5": "MD5 Hash value of the object (String)",
+				  "sha1": "SHA1 Hash value of the object (String)",
 				  "sha256": "SHA256 Hash value of the file (String)",
 				  "view_count": "Search Count of the file (Number)",
 				  "black_white": "Black/White List. 1 is Black and 2 is White list (Number)",
@@ -162,13 +162,13 @@ class v3():
 
 			Return Example:
 			{
-			  "result_code": "결과 코드 (Number)",
-			  "result_msg": "결과 메시지 (String)",
-			  "version": "API 페이지 버전 (String)",
-			  "date": "API 요청 시간 (String)",
-			  "md5": "파일의 MD5 해시 값 (String)",
-			  "sha1": "파일의 SHA1 해시 값 (String)",
-			  "sha256": "파일의 SHA256 해시 값 (String)",
+			  "result_code": "Result Code (Number)",
+			  "result_msg": "Result Message (String)",
+			  "version": "API page version (String)",
+			  "date": "requested date time of API (String)",
+			  "md5": "MD5 hash value of the object (String)",
+			  "sha1": "SHA1 hash value of the object (String)",
+			  "sha256": "SHA256 Hash value of the object (String)",
 			  "view_count": "파일의 조회 카운트 (Number)",
 			  "black_white": "블랙/화이트 리스트 여부. 1은 블랙리스트, 2는 화이트리스트 (Number)",
 			  "filetype": "파일의 포맷 (String)",
@@ -206,17 +206,17 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "md5": "파일의 MD5 해시 값 (String)",
-				  "sha1": "파일의 SHA1 해시 값 (String)",
-				  "sha256": "파일의 SHA256 해시 값 (String)",
-				  "format_type" :  "정적분석 결과 형식 타입 (String)",
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
+				  "md5": "MD5 Hash value of the Object (String)",
+				  "sha1": "SHA1 hash value of the object (String)",
+				  "sha256": "SHA256 Hash value of the object (String)",
+				  "format_type" :  "Result type of static analyis (String)",
 				  "peinfo" : {
-				    "version": "peinfo 결과 형식 버전 (String)",
-				    "date": "peinfo 추출 날짜 (String)",
+				    "version": "version of peinfo result format (String)",
+				    "date": "date time of run execution peinfo (String)",
 				    "section_info" : [
 				      {
 				        "raw_data_hash" : "섹션의 데이터 SHA256 (String)",
@@ -292,15 +292,15 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "md5": "파일의 MD5 해시 값 (String)",
-				  "sha1": "파일의 SHA1 해시 값 (String)",
-				  "sha256": "파일의 SHA256 해시 값 (String)",
-				  "filename": "파일이 업로드 된 파일명 목록 (Array),",
-				  "distribution_url": " 파일의 배포지 URL 목록 (Array)"
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
+				  "md5": "MD5 Hash value of the Object (String)",
+				  "sha1": "SHA1 hash value of the object (String)",
+				  "sha256": "SHA256 Hash value of the object (String)",
+				  "filename": "list of names with the same file object (Array),",
+				  "distribution_url": "list of urls where files are distributed (Array)"
 				}
 			"""
 			url=urlparse.urljoin(self.baseURL, "addinfo")
@@ -358,11 +358,11 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "url": "분석 요청한 URL (String)"
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
+				  "url": "requested url for analysis (String)"
 				}
 			"""
 
@@ -391,24 +391,24 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "url": "분석 요청한 URL (String)",
-				  "view_count": "URL 조회 카운트 (Number)",
-				  "smishing": "스미싱 URL 여부, 1이면 스미싱 URL (Number)",
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
+				  "url": "URL requested for analysis (String)",
+				  "view_count": "URL lookup count (Number)",
+				  "smishing": "1 if the URL is categorized as Smishing (Number)",
 				  "downloaded_malicious_file": {
-				    "total" : "URL에서 다운로드 된 악성 파일 개수 (Number)",
-				    "list" : "URL에서 다운로드 된 악성 파일 목록 (Array)"
+				    "total" : "Number of malicious files downloaded from the URL (Number)",
+				    "list" : "List of malicious files downloaded from the URL (Array)"
 				  },
 				  "downloaded_safe_file": {
-				      "total" : "URL에서 다운로드 된 정상 파일 개수 (Number)",
-				      "list" : "URL에서 다운로드 된 정상 파일 목록 (Array)"
+				      "total" : "Number of normal files downloaded from the URL (Number)",
+				      "list" : "List of normal files downloaded from the URL (Array)"
 				    },
 				  "same_hostname": {
-				      "total" : "동일한 호스트 명을 사용하는 URL 개수 (Number)",
-				      "list" : "동일한 호스트 명을 사용하는 URL 목록 (Array)"
+				      "total" : "Number of URLs with the same hostname (Number)",
+				      "list" : "List of URLs with the same hostname (Array)"
 				  }
 				}
 			"""
@@ -435,35 +435,35 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
-				  "ip": "정보 확인을 요청한 IP (String)",
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
+				  "ip": "requested IP address for lookup (String)",
 				  "view_count": "IP 조회 카운트 (Number)",
 				  "whois": "IP Whois 조회 정보 (String)",
 				  "location": {
-				    "cc" : "국가 코드 (String)",
-				    "cname" : "국가 명 (String)",
-				    "city" : "도시 명 (String)",
-				    "longitude" : "경도 (String)",
-				    "latitude" : "위도 (String)"
+				    "cc" : "Country Code (String)",
+				    "cname" : "Country Name (String)",
+				    "city" : "City Name (String)",
+				    "longitude" : "Longitude (String)",
+				    "latitude" : "Latitude (String)"
 				  },
 				  "hostname_history": {
-				    "total" : "해당 IP를 사용했던 호스트 명 개수 (Number)",
-				    "list" : "해당 IP를 사용했던 호스트 명 목록 (Array)"
+				    "total" : "Number of hostnames that used the IP (Number)",
+				    "list" : "List of hostnames that used the IP (Array)"
 				  },
 				  "detected_url": {
-				    "total" : "해당 IP를 사용했던 악성 URL 개수 (Number)",
-				    "list" : "해당 IP를 사용했던 악성 URL 목록 (Array)"
+				    "total" : "Number of malicious urls that used the IP (Number)",
+				    "list" : "List of malicious urls that used the IP (Array)"
 				  },
 				  "undetected_url": {
-				    "total" : "해당 IP를 사용했던 정상 URL 개수 (Number)",
-				    "list" : "해당 IP를 사용했던 정상 URL 목록 (Array)"
+				    "total" : "Number of normal urls that used the IP (Number)",
+				    "list" : "List of normal urls that used the IP (Array)"
 				  },
 				  "detected_downloaded_file": {
-				    "total" : "해당 IP에서 다운로드 된 악성 파일 개수 (Number)",
-				    "list" : "해당 IP에서 다운로드 된 악성 파일 목록 (Array)"
+				    "total" : "Number of malicious files downloaded from the IP (Number)",
+				    "list" : "List of malicious files downloaded from the IP (Array)"
 				  },
 				  "undetected_downloaded_file": {
 				    "total" : "해당 IP에서 다운로드 된 정상 파일 개수 (Number)",
@@ -503,10 +503,10 @@ class v3():
 
 			Return Example:
 				{
-				  "result_code": "결과 코드 (Number)",
-				  "result_msg": "결과 메시지 (String)",
-				  "version": "API 페이지 버전 (String)",
-				  "date": "API 요청 시간 (String)",
+				  "result_code": "Result Code (Number)",
+				  "result_msg": "Result Message (String)",
+				  "version": "API page version (String)",
+				  "date": "requested date time of API (String)",
 				  "hostname": "정보 확인을 요청한 Hostname (String)",
 				  "view_count": "Hostname 조회 카운트 (Number)",
 				  "whois": "Hostname Whois 조회 정보 (String)",

@@ -87,7 +87,7 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API Page Version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "md5": "MD5 Hash value of the object (String)",
 				  "sha1": "SHA1 hash value of the object (String)",
 				  "sha256": "SHA256 Hash value of the Object (String)"
@@ -120,11 +120,11 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "md5": "MD5 Hash value of the object (String)",
 				  "sha1": "SHA1 Hash value of the object (String)",
 				  "sha256": "SHA256 Hash value of the file (String)",
-				  "view_count": "Search Count of the file (Number)",
+				  "view_count": "file lookup count (Number)",
 				  "black_white": "Black/White List. 1 is Black and 2 is White list (Number)",
 				  "filetype": "File format (String)",
 				  "filesize": "File size (Number)",
@@ -165,25 +165,25 @@ class v3():
 			  "result_code": "Result Code (Number)",
 			  "result_msg": "Result Message (String)",
 			  "version": "API page version (String)",
-			  "date": "requested date time of API (String)",
+			  "date": "date time of API request (String)",
 			  "md5": "MD5 hash value of the object (String)",
 			  "sha1": "SHA1 hash value of the object (String)",
 			  "sha256": "SHA256 Hash value of the object (String)",
-			  "view_count": "파일의 조회 카운트 (Number)",
-			  "black_white": "블랙/화이트 리스트 여부. 1은 블랙리스트, 2는 화이트리스트 (Number)",
-			  "filetype": "파일의 포맷 (String)",
-			  "filesize": "파일의 크기 (Number)",
-			  "first_seen": "파일의 최초 수집 날짜(String)",
-			  "ai_score": "MAX AI에 의하여 생성된 결과 값 (Number)",
-			  "taglist": "파일의 태그 명 목록 (Array)",
-			  "tag_name_etc" : "파일의 프로파일링 태그 목록 (Array)", 
-			  "imphash" : "PE 타입 파일의 Import Table 기반 해시 값 (String)",
-			  "ssdeep" : "파일의 ssdeep 기반 해시 값 (String)",
+			  "view_count": "file lookup count (Number)",
+			  "black_white": "Determines black/white listed. 1=blacklisted, 2=whitelisted (Number)",
+			  "filetype": "type of the file (String)",
+			  "filesize": "size of the file (Number)",
+			  "first_seen": "fist date file has collected (String)",
+			  "ai_score": "score by MAX AI (Number)",
+			  "taglist": "List of tags of the file (Array)",
+			  "tag_name_etc" : "List of profiling tags of the file (Array)", 
+			  "imphash" : "Hash value of Import Table on PE type files (String)",
+			  "ssdeep" : "Hash value of ssdeep result (String)",
 			  "behavior": {
-			    "행위분석 환경": {
-			      "date": "행위분석 날짜 (String)",
-			      "detection": "악성탐지 된 행위 목록 (Array)",
-			      "security_level": "행위분석 위험도. 1은 악성, 2은 위험, 3은 정상 (Number)"
+			    "analysis enviroment": {
+			      "date": "date time of analysis (String)",
+			      "detection": "list of malicious activity (Array)",
+			      "security_level": "Risk level of the result. 1=malicious, 2=dangerous, 3=normal (Number)"
 			    }
 			  }
 			}
@@ -209,7 +209,7 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "md5": "MD5 Hash value of the Object (String)",
 				  "sha1": "SHA1 hash value of the object (String)",
 				  "sha256": "SHA256 Hash value of the object (String)",
@@ -219,57 +219,57 @@ class v3():
 				    "date": "date time of run execution peinfo (String)",
 				    "section_info" : [
 				      {
-				        "raw_data_hash" : "섹션의 데이터 SHA256 (String)",
-				        "raw_data_offset" : "섹션의 파일 내 오프셋 (String)",
-				        "section_name" : "섹션 이름 (String)"
+				        "raw_data_hash" : "SHA256 value of the section data (String)",
+				        "raw_data_offset" : "Offset to the section in file (String)",
+				        "section_name" : "Section name(String)"
 				      }
 				    ],
 				    "pe_info" : [
 				      {
-				        "subsystem" : " 동작 시스템 (String)",
-				        "is_windows_gui" : "윈도우 GUI 타입 (String)",
-				        "image_base" : "메모리에 로드되는 시작 주소 (String)",
-				        "characteristics" : "파일의 속성 정보 (String)",
-				        "pe_file_type" : "PE 타입 (String)",
-				        "stored_checksum" : "파일의 체크섬 정보 (String)",
-				        "file_alignment" : "파일 상태에서 섹션 크기 단위 (String)",
-				        "entry_point" : "프로그램의 시작 주소 (String)",
-				        "is_console" : "콘솔 프로그램 타입 (String)",
-				        "section_alignment" : "가상 메모리로 로드되는 섹션의 크기 단위 (String)"
+				        "subsystem" : "subsystem (String)",
+				        "is_windows_gui" : "GUI type of Windows (String)",
+				        "image_base" : "base address of memory allocation (String)",
+				        "characteristics" : "attributes of file (String)",
+				        "pe_file_type" : "Type of PE file(String)",
+				        "stored_checksum" : "Checksum of file (String)",
+				        "file_alignment" : "Chunk Size of the section in file (String)",
+				        "entry_point" : "Entry point of the program (String)",
+				        "is_console" : "is this the console program (String)",
+				        "section_alignment" : "Chuck Size of the section in virtual memory (String)"
 				      }
 				    ],
 				    "signcheck" : {
-				      "signing_date" : "서명일 (String)",
-				      "signers_details" : "코드 서명 인증서 리스트 (Array)",
-				      "verified" : "인증서 서명 검증 결과 (String)",
-				      "counter_signers_details" : "타임 스탬프 인증서 리스트 (Array)"
+				      "signing_date" : "date time of code sign (String)",
+				      "signers_details" : "list of code sign certificates (Array)",
+				      "verified" : "result of verification on code sign certificates (String)",
+				      "counter_signers_details" : "list of timestamp certificates (Array)"
 				    },
 				    "import_info" : [
 				      {
-				        "dll_name" : "Import Dll 이름 (String)",
-				        "function_list" : "사용하는 함수 리스트 (Array)"
+				        "dll_name" : "list DLLs that are imported (String)",
+				        "function_list" : "list of functions used (Array)"
 				      }
 				    ],
 				    "file_info" : {
-				      "product_version": "제품 버전 (String)",
-				      "original_filename": "프로그램의 원본 이름 (String)",
-				      "file_version": "파일 버전 (String)",
-				      "legal_copyright": "상표 정보 (String)",
-				      "company_name": "회사 이름 (String)",
-				      "internal_name": "프로그램 내부 이름 (String)",
-				      "product_name": "제품 이름 (String)",
-				      "file_description": "파일 설명 (String)"
+				      "product_version": "Product version (String)",
+				      "original_filename": "Original file name (String)",
+				      "file_version": "File Version (String)",
+				      "legal_copyright": "Copyright (String)",
+				      "company_name": "Company name (String)",
+				      "internal_name": "Internal name of the program (String)",
+				      "product_name": "Product name (String)",
+				      "file_description": "File description (String)"
 				    },
 				    "export_info" : [
 				      {
-				        "function_list" : "함수 리스트 (Array)"
+				        "function_list" : "List of the functions (Array)"
 				      }
 				    ]
 				  },
 				  "strings_result" : {
-				    "version" : "strings 결과 형식 버전 (String)",
-				    "date" : "strings 추출 날짜 (String)",
-				    "strings" : "정규 표현식을 이용해 추출해 낸 의미있는 strings 목록 (Array)"
+				    "version" : "version of strings output format (String)",
+				    "date" : "date time of strings extraction (String)",
+				    "strings" : "List of meaningful strings extracted using regular expressions (Array)"
 				  }
 				}
 			"""
@@ -295,7 +295,7 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "md5": "MD5 Hash value of the Object (String)",
 				  "sha1": "SHA1 hash value of the object (String)",
 				  "sha256": "SHA256 Hash value of the object (String)",
@@ -361,7 +361,7 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "url": "requested url for analysis (String)"
 				}
 			"""
@@ -394,7 +394,7 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "url": "URL requested for analysis (String)",
 				  "view_count": "URL lookup count (Number)",
 				  "smishing": "1 if the URL is categorized as Smishing (Number)",
@@ -438,10 +438,10 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
+				  "date": "date time of API request (String)",
 				  "ip": "requested IP address for lookup (String)",
-				  "view_count": "IP 조회 카운트 (Number)",
-				  "whois": "IP Whois 조회 정보 (String)",
+				  "view_count": "IP lookup count (Number)",
+				  "whois": "IP Whois lookup information (String)",
 				  "location": {
 				    "cc" : "Country Code (String)",
 				    "cname" : "Country Name (String)",
@@ -466,16 +466,16 @@ class v3():
 				    "list" : "List of malicious files downloaded from the IP (Array)"
 				  },
 				  "undetected_downloaded_file": {
-				    "total" : "해당 IP에서 다운로드 된 정상 파일 개수 (Number)",
-				    "list" : "해당 IP에서 다운로드 된 정상 파일 목록 (Array)"
+				    "total" : "Number of normal files downloaded from the IP (Number)",
+				    "list" : "List of normal files downloaded from the IP (Array)"
 				  },
 				  "detected_communicating_file": {
-				    "total" : "해당 IP와 통신한 악성 파일 개수 (Number)",
-				    "list" : "해당 IP와 통신한 악성 파일 목록 (Array)"
+				    "total" : "Number of malicious files that have communicated to the IP (Number)",
+				    "list" : "List of malicious files that have communicated to the IP (Array)"
 				  },
 				  "undetected_communicating_file": {
-				    "total" : "해당 IP와 통신한 정상 파일 개수 (Number)",
-				    "list" : "해당 IP와 통신한 정상 파일 목록 (Array)"
+				    "total" : "Number of normal files that have communicated to the IP (Number)",
+				    "list" : "List of normal files that have communicated to the IP (Array)"
 				  }
 				}
 
@@ -506,45 +506,45 @@ class v3():
 				  "result_code": "Result Code (Number)",
 				  "result_msg": "Result Message (String)",
 				  "version": "API page version (String)",
-				  "date": "requested date time of API (String)",
-				  "hostname": "정보 확인을 요청한 Hostname (String)",
-				  "view_count": "Hostname 조회 카운트 (Number)",
+				  "date": "date time of API request (String)",
+				  "hostname": "hostname of request origin (String)",
+				  "view_count": "Hostname lookup count (Number)",
 				  "whois": "Hostname Whois 조회 정보 (String)",
 				  "location": [{
-				    "cc" : "국가 코드 (String)",
-				    "cname" : "국가 명 (String)",
-				    "city" : "도시 명 (String)",
-				    "longitude" : "경도 (String)",
-				    "latitude" : "위도 (String)",
-				    "iplist" : "해당되는 IP 리스트 (Array)"
+				    "cc" : "Country Code (String)",
+				    "cname" : "Country Name (String)",
+				    "city" : "City Name (String)",
+				    "longitude" : "Longitude (String)",
+				    "latitude" : "Latitude (String)"
+				    "iplist" : "list of realated ip (Array)"
 				  }],
 				  "ip_history": {
-				    "total" : "해당 Hostname이 사용했던 IP 개수 (Number)",
-				    "list" : "해당 Hostname이 사용했던 IP 목록 (Array)"
+				    "total" : "Number of IP address that used the hostname (Number)",
+				    "list" : "List of IP address that used the hostname (Array)"
 				  },
 				  "detected_url": {
-				    "total" : "해당 Hostname이 사용했던 악성 URL 개수 (Number)",
-				    "list" : "해당 Hostname이 사용했던 악성 URL 목록 (Array)"
+				    "total" : "Number of malicious urls that used the hostname (Number)",
+				    "list" : "List of malicious urls that used the hostname(Array)"
 				  },
 				  "undetected_url": {
-				    "total" : "해당 Hostname이 사용했던 정상 URL 개수 (Number)",
-				    "list" : "해당 Hostname이 사용했던 정상 URL 목록 (Array)"
+				    "total" : "Number of normal urls that used the hostname (Number)",
+				    "list" : "List of normal urls that used the hostname(Array)"
 				  },
 				  "detected_downloaded_file": {
-				    "total" : "해당 Hostname에서 다운로드 된 악성 파일 개수 (Number)",
-				    "list" : "해당 Hostname에서 다운로드 된 악성 파일 목록 (Array)"
+				    "total" : "Number of malicious files downloaded from the hostname (Number)",
+				    "list" : "List of malicious files downloaded from the hostname (Array)"
 				  },
 				  "undetected_downloaded_file": {
-				    "total" : "해당 Hostname에서 다운로드 된 정상 파일 개수 (Number)",
-				    "list" : "해당 Hostname에서 다운로드 된 정상 파일 목록 (Array)"
+				    "total" : "Number of normal files downloaded from the hostname (Number)",
+				    "list" : "List of normal files downloaded from the hostname (Array)"
 				  },
 				  "detected_communicating_file": {
-				    "total" : "해당 Hostname에서 통신한 악성 파일 개수 (Number)",
-				    "list" : "해당 Hostname에서 통신한 악성 파일 목록 (Array)"
+				    "total" : "Number of malicious files that have communicated to the hostname (Number)",
+				    "list" : "List of malicious files that have communicated to the hostname (Array)"
 				  },
 				  "undetected_communicating_file": {
-				    "total" : "해당 Hostname에서 통신한 정상 파일 개수 (Number)",
-				    "list" : "해당 Hostname에서 통신한 정상 파일 목록 (Array)"
+				    "total" : "Number of normal files that have communicated to the hostname  (Number)",
+				    "list" : "List of normal files that have communicated to the hostname (Array)"
 				  }
 				}
 			"""
